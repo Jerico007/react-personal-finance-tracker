@@ -1,0 +1,36 @@
+.form-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    
+}
+.main-form{
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    padding: 1rem;
+    border-radius: 20px;
+    width: 40%;
+    font-family: var(--defaultFont);
+    box-shadow:var(--shadowEffect);
+}
+
+.main-form > :first-child{
+  
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: center;
+    padding: 0.2rem;
+}
+
+.password-box{
+    position: relative;
+}
+
+.eyes{
+    position: absolute;
+    right: 10%;
+    top: 25%;
+}
+

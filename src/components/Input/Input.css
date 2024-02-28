@@ -1,0 +1,23 @@
+label{
+    font-family: var(--defaultFont);
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.5rem;
+}
+
+input{
+    padding: 0.5rem;
+    border: none;
+    border-bottom: 3px solid var(--shadeOfGrey);
+    font-family: var(--defaultFont);
+    font-size: 1rem;
+    font-weight: 500;
+    outline: none;
+}
+
+.Input-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    line-height:1vh;
+}
