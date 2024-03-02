@@ -1,0 +1,11 @@
+.form-input{
+    border: none;
+    border-bottom: 3px solid var(--shadeOfGrey);
+    font-family: var(--defaultFont);
+    font-size: 1rem;
+    font-weight: 500;
+    width: 100%;
+    outline: none;
+    padding: 0.5rem;
+}
+

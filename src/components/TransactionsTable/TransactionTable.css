@@ -1,0 +1,44 @@
+.search-box {
+  padding: 1rem;
+}
+
+.table-search {
+  width: 90vw;
+  border: none;
+}
+
+.table-heading {
+  font-family: var(--defaultFont);
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.export-button:hover {
+  background-color: var(--shadeOfGrey) !important;
+}
+
+.import-button:hover {
+  background-color: var(--shadeOfGrey) !important;
+  color: var(--theame) !important;
+}
+
+.search-icon {
+  height: 2.2rem;
+  padding: 0.5rem;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .export-button,
+  .import-button {
+    font-size: 0.6rem;
+    padding: 0.1rem;
+  }
+
+  .table-heading{
+    font-size: 1rem;
+  }
+
+  .table-search{
+    width: 80vw;
+  }
+}

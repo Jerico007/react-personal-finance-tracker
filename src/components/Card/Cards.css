@@ -1,0 +1,20 @@
+.card-holder{
+    padding: 3rem;
+
+}
+
+.card{
+    width: 25vw;
+    font-family:var(--defaultFont);
+    box-shadow: var(--shadowEffect);
+}
+
+.card-button{
+    width:90%
+}
+
+@media screen and (min-width:320px) and (max-width:767px) {
+    .card{
+        width: 80vw;
+    }
+}
