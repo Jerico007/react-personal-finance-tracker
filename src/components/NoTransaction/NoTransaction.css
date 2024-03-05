@@ -1,0 +1,11 @@
+
+@media screen and (min-width:320px) and (max-width:375px) {
+    .image-holder > img{
+        width: 200px !important;
+    }
+    
+    .NoTransaction p{
+        font-size: 1rem !important;
+    }
+    
+}

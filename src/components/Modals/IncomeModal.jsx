@@ -101,15 +101,16 @@ const IncomeModal = ({ showIncomeModal, setIncomeModal }) => {
             rules={[{ required: true, message: "Please Select one" }]}
           >
             <select className="form-input" style={{ color: "#7a7979" }}>
-              <option value={"none"}>Select</option>
+              <option value={"Other"}>Select</option>
               <option value={"Salary"}>Salary</option>
               <option value={"Freelance"}>Freelance</option>
               <option value={"Investment"}>Investment</option>
+              <option value={"Other"}>Other</option>
             </select>
           </Form.Item>
           <Form.Item>
             <Flex justify={"flex-start"}>
-              <Button type={"primary"} htmlType={"submit"}>
+              <Button type={"primary"} htmlType={"submit"} style={{backgroundColor:"var(--theame)"}}>
                 Add Income
               </Button>
             </Flex>

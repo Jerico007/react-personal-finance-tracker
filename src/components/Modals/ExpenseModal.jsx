@@ -100,7 +100,7 @@ const ExpenseModal = ({ showExpenseModal, setExpenseModal }) => {
             rules={[{ required: true, message: "Please Select one" }]}
           >
             <select className="form-input" style={{ color: "#7a7979" }}>
-              <option value={"none"}>Select</option>
+              <option value={"Miscellaneous"}>Select</option>
               <option value={"Shopping"}>Shopping</option>
               <option value={"Food"}>Food</option>
               <option value={"Entertainment"}>Entertainment</option>
@@ -109,7 +109,7 @@ const ExpenseModal = ({ showExpenseModal, setExpenseModal }) => {
           </Form.Item>
           <Form.Item>
             <Flex justify={"flex-start"}>
-              <Button type={"primary"} htmlType={"submit"}>
+              <Button type={"primary"}  htmlType={"submit"} style={{backgroundColor:"var(--theame)"}}>
                 Add Expense
               </Button>
             </Flex>
