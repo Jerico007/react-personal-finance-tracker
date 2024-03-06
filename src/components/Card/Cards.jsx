@@ -168,6 +168,7 @@ const Cards = () => {
       <ExpenseModal
         showExpenseModal={showExpenseModal}
         setExpenseModal={setExpenseModal}
+        currBalance={FinanceDetails.myBalance}
       />
     </>
   );

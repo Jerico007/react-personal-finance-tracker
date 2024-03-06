@@ -18,7 +18,7 @@ import { toast } from "react-toastify";
 import { useDispatch } from "react-redux";
 import { fetchData } from "../../Slice/userTransaction";
 
-const ExpenseModal = ({ showExpenseModal, setExpenseModal }) => {
+const ExpenseModal = ({ showExpenseModal, setExpenseModal ,currBalance}) => {
   // Form reference
   const [form] = Form.useForm();
 
@@ -30,6 +30,11 @@ const ExpenseModal = ({ showExpenseModal, setExpenseModal }) => {
 
   //   Function to handle Form submission
   async function handleFormSubmit(values) {
+     if(currBalance <= Number(values.amount))
+     {
+        toast.warn("Low balance");
+        return;
+     }
     const data = {
       type: "expense",
       ...values,
