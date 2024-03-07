@@ -15,6 +15,7 @@ import { deleteDoc } from "firebase/firestore";
 import { db, doc, auth } from "../../firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { toast } from "react-toastify";
+import confirm from "antd/es/modal/confirm";
 
 const Cards = () => {
   // show Income Modal
@@ -48,6 +49,7 @@ const Cards = () => {
 
   // function to reset balance
   async function resetBalance() {
+   if(window.confirm("Are you sure you want to reset")){
     try {
       if (transactions.length > 0 && !loading) {
         dispatch(setLoading(true));
@@ -62,6 +64,8 @@ const Cards = () => {
       dispatch(setLoading(false));
       toast.error(error.message);
     }
+   }
+  
   }
 
   // function to calculate balance
