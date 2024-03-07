@@ -132,46 +132,57 @@ const Chart = ({ data }) => {
           height={200}
         />
       </div>
-      <div style={{ borderRadius: "5px", boxShadow: "var(--shadowEffect)" }}>
-        <p className="chart-label">Expense Sources</p>
-        <PieChart
-          series={[
-            {
-              data: [
-                { id: 0, value: expenseSource.Miscellaneous, label: "Miscellaneous" },
-                {
-                  id: 1,
-                  value: expenseSource.Shopping,
-                  label: "Shopping",
-                },
-                {
-                  id: 2,
-                  value: expenseSource.Food,
-                  label: "Food",
-                },
-                {
-                  id: 3,
-                  value:expenseSource.Entertainment,
-                  label: "Entertainment",
-                },
-              ],
+      {incExp.expense > 0 ? (
+        <div style={{ borderRadius: "5px", boxShadow: "var(--shadowEffect)" }}>
+          <p className="chart-label">Expense Sources</p>
+          <PieChart
+            series={[
+              {
+                data: [
+                  {
+                    id: 0,
+                    value: expenseSource.Miscellaneous,
+                    label: "Miscellaneous",
+                  },
+                  {
+                    id: 1,
+                    value: expenseSource.Shopping,
+                    label: "Shopping",
+                  },
+                  {
+                    id: 2,
+                    value: expenseSource.Food,
+                    label: "Food",
+                  },
+                  {
+                    id: 3,
+                    value: expenseSource.Entertainment,
+                    label: "Entertainment",
+                  },
+                ],
 
-              highlightScope: { faded: "global", highlighted: "item" },
-              faded: { innerRadius: 30, additionalRadius: -30, color: "gray" },
-              innerRadius: 38,
-              outerRadius: 98,
-              paddingAngle: 5,
-              cornerRadius: 5,
-              startAngle: -90,
-              endAngle: 270,
-              cx: 130,
-         
-            },
-          ]}
-          width={400}
-          height={200}
-        />
-      </div>
+                highlightScope: { faded: "global", highlighted: "item" },
+                faded: {
+                  innerRadius: 30,
+                  additionalRadius: -30,
+                  color: "gray",
+                },
+                innerRadius: 38,
+                outerRadius: 98,
+                paddingAngle: 5,
+                cornerRadius: 5,
+                startAngle: -90,
+                endAngle: 270,
+                cx: 130,
+              },
+            ]}
+            width={400}
+            height={200}
+          />
+        </div>
+      ) : (
+        <></>
+      )}
     </div>
   );
 };
