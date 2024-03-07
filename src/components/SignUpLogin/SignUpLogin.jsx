@@ -116,6 +116,7 @@ function SignUpLogin() {
     } catch (error) {
       toast.error(error);
       setLoading(false);
+      return;
     }
 
     try {
@@ -137,7 +138,6 @@ function SignUpLogin() {
       toast.success("User created successfully");
       setLoading(false);
       setFormData(initial);
-      setLogin(!login);
     } catch (error) {
       setLoading(false);
       toast.error(error.message);
